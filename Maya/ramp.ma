@@ -1,6 +1,6 @@
 //Maya ASCII 2015 scene
 //Name: ramp.ma
-//Last modified: Wed, Feb 18, 2015 04:27:43 PM
+//Last modified: Thu, Feb 19, 2015 09:22:55 PM
 //Codeset: UTF-8
 requires maya "2015";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOptions" -nodeType "mentalrayGlobals"
@@ -14,8 +14,8 @@ fileInfo "osv" "Mac OS X 10.9.2";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 27.187056724035514 9.7768417310659625 10.573694786844772 ;
-	setAttr ".r" -type "double3" -20.138352729609782 -298.99999999993435 0 ;
+	setAttr ".t" -type "double3" -1.5909212471265182 22.641627762811282 18.30162686007229 ;
+	setAttr ".r" -type "double3" -47.738352729608813 -345.39999999993273 -1.6433422243381258e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
@@ -844,8 +844,6 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
